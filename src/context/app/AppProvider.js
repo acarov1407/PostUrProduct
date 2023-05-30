@@ -319,7 +319,6 @@ function AppProvider({ children }) {
 
         await updateCommentInDB(updatedComments);
         setLoadings({ ...loadings, isSubmittingComment: false });
-
     }
 
     const deleteComment = async (id) => {
