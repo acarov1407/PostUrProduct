@@ -5,14 +5,14 @@ function ModalAlert({ title }) {
     const { modals: { modalAlert }, handleModalAlert, modalAlertRef } = useApp();
 
     const handleConfirm = () => {
-        if (modalAlertRef.current) {
+        if (modalAlertRef?.current) {
             modalAlertRef.current.resolve({ isConfirmed: true });
             handleModalAlert();
         }
     }
 
     const handleCancel = () => {
-        if (modalAlertRef.current) {
+        if (modalAlertRef?.current) {
             modalAlertRef.current.resolve({ isConfirmed: false });
             handleModalAlert();
         }

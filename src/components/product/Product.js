@@ -32,6 +32,7 @@ function Product({ product }) {
                 height={150}
                 width={150}
                 className="w-full max-w-[300px] md:max-w-[200px] rounded block"
+                loading="lazy"
             />
 
             <div className="flex-1 grid h-full auto-rows-min gap-2">

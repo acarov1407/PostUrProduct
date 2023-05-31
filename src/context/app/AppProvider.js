@@ -343,6 +343,7 @@ function AppProvider({ children }) {
             value={{
                 alert,
                 modals,
+                modalAlertRef,
                 loadings,
                 currentProduct,
                 handleModalError,

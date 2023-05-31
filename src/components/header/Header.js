@@ -1,4 +1,4 @@
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, CpuChipIcon } from '@heroicons/react/24/outline'
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from 'react'
@@ -70,7 +70,10 @@ function Header() {
                                 <div className="rounded-sm bg-gray-600 h-1 mt-2"></div>
                                 <ul className="border border-gray-300 bg-white p-5 flex flex-col gap-5 text-sm text-center">
                                     <li>
-                                        <Link href="/my-products" className="p-2 block hover:text-indigo-600 border-b border-gray-400">Mis Productos</Link>
+                                        <Link href="/my-products" className="p-2 hover:text-indigo-600 border-b border-gray-400 flex items-center gap-2">
+                                            <CpuChipIcon className="h-5 w-5" />
+                                            <span>Mis Productos</span>
+                                        </Link>
                                     </li>
                                     <li>
                                         <button

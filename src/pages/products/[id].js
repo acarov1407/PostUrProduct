@@ -70,7 +70,7 @@ function Product() {
                                     src={image.URL}
                                     alt={`${name} image`}
                                     className="max-w-md w-full block h-auto rounded"
-                                    priority={true}
+                                    priority
                                 />
                                 <div className="mt-5">
                                     <p className="text-gray-800 font-medium">Fecha de publicación: <span className="text-gray-600">{formatDate(created)}</span></p>
