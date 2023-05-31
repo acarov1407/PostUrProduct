@@ -5,11 +5,23 @@ function useScroll() {
     const [isEndOfPage, setIsEndOfPage] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("touchmove", handleScroll);
+        function handleScroll2() {
+            const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+
+            if (scrollTop + clientHeight >= scrollHeight) {
+                // Aquí puedes llamar a la función que deseas ejecutar cuando llegues al final de la página
+                setIsEndOfPage(true);
+            } else {
+                setIsEndOfPage(false);
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll2);
+        window.addEventListener("touchmove", handleScroll2);
+
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("touchmove", handleScroll);
+            window.removeEventListener("scroll", handleScroll2);
+            window.removeEventListener("touchmove", handleScroll2);
         };
     }, []);
 
@@ -23,7 +35,7 @@ function useScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // Check if end of page 
-        if ( (scrollTop + windowHeight) >= documentHeight) {
+        if ((scrollTop + windowHeight) >= documentHeight) {
             setIsEndOfPage(true);
 
         } else {
