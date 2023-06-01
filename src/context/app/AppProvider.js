@@ -245,11 +245,9 @@ function AppProvider({ children }) {
             //Delete image stored
             await deleteProductImage(product.image.name);
 
-            //Update state
-            const updatedUserProducts = userProducts.filter(_product => _product.id !== product.id);
-            setUserProducts(updatedUserProducts);
             router.push('/my-products');
         } catch (error) {
+            console.log(error)
             handleModalError();
         }
     }

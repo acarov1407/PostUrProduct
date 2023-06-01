@@ -32,14 +32,14 @@ function NewProductForm({ isOnEditionMode }) {
         }
     }
 
-    const handleFormSubmit = (formData) => {
+    const handleFormSubmit = async (formData) => {
 
         if(isOnEditionMode) {
-            editProduct(formData);
+            await editProduct(formData);
             return;
         }
 
-        createProduct(formData);
+       await createProduct(formData);
     }
 
 

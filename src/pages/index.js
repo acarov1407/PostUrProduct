@@ -69,6 +69,7 @@ function Home({ initialProducts, initialError }) {
     useEffect(() => {
         const getMoreProducts = async () => {
             if (!loadMoreProducts) return;
+            console.log('obteniendo productos')
             setLoadings({ ...loadings, isLoadingMoreProducts: true });
             const lastProductId = products[products.length - 1].id;
             try {

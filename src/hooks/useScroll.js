@@ -23,7 +23,7 @@ function useScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // Check if end of page 
-        if (Math.ceil(scrollTop + windowHeight) >= documentHeight) {
+        if (Math.ceil(scrollTop + windowHeight) + 10 >= documentHeight) {
             setIsEndOfPage(true);
 
         } else {
@@ -32,6 +32,7 @@ function useScroll() {
 
     }
 
+ 
     return isEndOfPage;
 }
 
