@@ -15,7 +15,6 @@ function Layout({ children, loading }) {
         <>
             <Head>
                 <title>PostUrProduct</title>
-                <link rel="icon" type="image" href="/assets/img/app_logo.png" />
             </Head>
             <Header />
             <main className="bg-white mt-[90px] default-height mb-8">

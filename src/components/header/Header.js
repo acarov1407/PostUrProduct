@@ -11,7 +11,7 @@ function Header() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const { authUser, logout } = useAuth();
+    const { authUser, logout, isLoggingOut } = useAuth();
 
 
     //Close responsive menu if user resize page
@@ -80,6 +80,7 @@ function Header() {
                                             type="button"
                                             className="bg-indigo-500 hover:bg-indigo-600 transition-colors px-2 py-1 w-full rounded-sm text-white"
                                             onClick={logout}
+                                            disabled={isLoggingOut}
                                         >
                                             Cerrar Sesión
                                         </button>

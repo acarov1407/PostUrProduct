@@ -17,6 +17,7 @@ function AuthProvider({ children }) {
     const [authUser, setAuthUser] = useState(null);
     const [isLoadingAuth, setIsLoadingAuth] = useState(true);
     const [isLoadingAuthForm, setIsLoadingAuthForm] = useState(false);
+    const [isLoggingOut, setIsLoggingOut] = useState(false);
     const [alert, setAlert] = useState("");
 
 
@@ -65,10 +66,18 @@ function AuthProvider({ children }) {
     }
 
     const logout = async () => {
+        setIsLoggingOut(true);
         const auth = getAuth();
-        await router.push('/');
-        await signOut(auth);
-        
+
+        try{
+            await router.push('/');
+            await signOut(auth);
+        }catch(error){
+            console.log(error);
+        } finally {
+            setIsLoggingOut(false);
+        }
+              
     }
 
     const login = async ({ email, password }) => {
@@ -101,6 +110,7 @@ function AuthProvider({ children }) {
                 logout,
                 isLoadingAuth,
                 isLoadingAuthForm,
+                isLoggingOut,
                 authUser,
                 
             }}

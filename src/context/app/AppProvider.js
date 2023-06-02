@@ -191,7 +191,6 @@ function AppProvider({ children }) {
         if (authUser.uid !== currentProduct.owner.id) return;
 
         setLoadings({ ...loadings, isUpdatingProduct: true });
-
         try {
             const productRef = doc(firebase.db, "products", currentProduct.id);
             await updateDoc(productRef, productData);

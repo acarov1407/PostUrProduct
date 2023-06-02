@@ -9,7 +9,7 @@ import SubmitButton from "@/components/form/SubmitButton"
 
 function NewProductForm({ isOnEditionMode }) {
 
-    const { editProduct, createProduct, alert, loadings: { isCreatingProduct, isUpdatingProduct }, currentProduct  } = useApp();
+    const { editProduct, createProduct, alert, loadings: { isCreatingProduct, isUpdatingProduct }, currentProduct } = useApp();
 
     const setInitialValues = () => {
         if (isOnEditionMode) {
@@ -34,12 +34,13 @@ function NewProductForm({ isOnEditionMode }) {
 
     const handleFormSubmit = async (formData) => {
 
-        if(isOnEditionMode) {
-            await editProduct(formData);
+        if (isOnEditionMode) {
+            const { image, ...editedData } = formData;
+            await editProduct(editedData);
             return;
         }
 
-       await createProduct(formData);
+        await createProduct(formData);
     }
 
 
