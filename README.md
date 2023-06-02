@@ -17,6 +17,9 @@ PostUrProduct es un aplicativo web diseñado para permitir a los usuarios public
 - <strong>Publicar herramientas tecnológicas: </strong> Los usuarios pueden crear nuevas publicaciones y compartir información detallada sobre las herramientas tecnológicas que deseen compartir.
 
 - <strong>Administración de publicaciones: </strong> Los usuarios pueden editar la información de sus publicaciones existentes, como el título, la descripción, las imágenes y otros detalles relevantes. También tienen la opción de eliminar una publicación si así lo desean.
+<br></br>
+![admin](https://github.com/acarov1407/PostUrProduct/assets/118088808/0067d5f5-6699-4653-b6ae-70eda92f1bab)
+
 
 - <strong> Interacción social: </strong> Los usuarios pueden votar por las herramientas que más les gusten, lo que permite destacar las herramientas más populares. Además, los usuarios pueden dejar comentarios en las publicaciones para iniciar conversaciones y compartir ideas.
 
