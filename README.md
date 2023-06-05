@@ -22,7 +22,11 @@ PostUrProduct es un aplicativo web diseñado para permitir a los usuarios public
 
 
 - <strong> Interacción social: </strong> Los usuarios pueden votar por las herramientas que más les gusten, lo que permite destacar las herramientas más populares. Además, los usuarios pueden dejar comentarios en las publicaciones para iniciar conversaciones y compartir ideas.
+<br></br>
+![social](https://github.com/acarov1407/PostUrProduct/assets/118088808/a654a0e2-8868-4e9a-a538-8d5c0012c4a0)
 
 - <strong>Filtrado y búsqueda: </strong> Los usuarios pueden filtrar las herramientas por diferentes criterios, como las más recientes, las más gustadas o las más comentadas. También pueden realizar búsquedas específicas utilizando términos de búsqueda.
+<br></br>
+![search](https://github.com/acarov1407/PostUrProduct/assets/118088808/f3c87f7e-c01c-44a3-bcad-77c8abaada53)
 
 # Tecnologías Utilizadas
